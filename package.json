@@ -1,0 +1,23 @@
+{
+  "name": "ai-assistant",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf build && rimraf tsconfig.tsbuildinfo",
+    "dev": "npm run clean && concurrently \"tsc -w\" \"nodemon .\"",
+    "build": "npm run clean && tsc",
+    "start": "node ."
+  },
+  "author": "Ekansh Jain",
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1",
+    "rimraf": "^5.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "typescript": "^5.2.2"
+  }
+}
