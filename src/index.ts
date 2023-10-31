@@ -48,14 +48,14 @@ micInputStream.on('data', async (data: any) => {
     const result = await openai.chat.completions.create({
       model: 'gpt-3.5-turbo',
       messages: [
-        { role: 'system', content: 'You are a helpful assistant.' },
+        { role: 'system', content: 'You are a sarcastic assistant.' },
         {
           role: 'user',
           content: text
         }
       ]
     })
-    console.log(result)
+    console.log('Result', result.choices[0]?.message.content)
   } else {
     console.log(recognizer.partialResult().partial)
   }
