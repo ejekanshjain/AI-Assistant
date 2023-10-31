@@ -57,7 +57,7 @@ micInputStream.on('data', async (data: any) => {
     })
     console.log('Result', result.choices[0]?.message.content)
   } else {
-    console.log(recognizer.partialResult().partial)
+    console.log(recognizer.partialResult())
   }
 })
 
